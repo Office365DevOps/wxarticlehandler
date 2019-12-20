@@ -30,7 +30,7 @@ namespace WXArticleHandler.Bots
                 Images = new List<CardImage> { new CardImage("https://raw.githubusercontent.com/microsoft/botframework-sdk/master/icon.png") },
             };
 
-            var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, null, heroCard);
+            var attachments = new MessagingExtensionAttachment(HeroCard.ContentType, "https://www.microsoft.com", heroCard);
             var result = new MessagingExtensionResult(AttachmentLayoutTypes.List, "result", new[] { attachments }, null, "test unfurl");
 
             return new MessagingExtensionResponse(result);
